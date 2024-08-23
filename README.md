@@ -77,6 +77,7 @@ php artisan serve
 ```bash
 npm run dev
 ```
+![SmartInsight Dashboard](public/images/dashboard.PNG)
 ###Usage
 
 Accessing the Application
@@ -141,9 +142,18 @@ To generate the API docs, run the following command:
 ```bash
     php artisan scribe:generate
 ```
+The API (Rate limit to 5 requests per minutes)Endpoints for Developer consumptions are :
+```bash
+i. http://127.0.0.1:8000/api/autobots   to get list of users resources
+ii. http://127.0.0.1:8000/api/autobots/{id}/posts  to get list of post resources pagnated
+iii. http://127.0.0.1:8000/api/posts/{id}/comments  to get list of comment resources paginated
+```
 
 The API documentation can be accessed at:
 url
 ```bash
     http://127.0.0.1:8000/docs
 ```
+![SmartInsight Docs For Autobot](public/images/autobot.PNG)
+![SmartInsight Docs For Post](public/images/post.PNG)
+![SmartInsight Docs For comments](public/images/comments.PNG)
