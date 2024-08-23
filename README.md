@@ -4,6 +4,12 @@ This Project is for the SmartInsight Assesment Question. Which creates 500 Autob
 
 ### The .env.example file contains sensitive info about this web app such as app key, reverb credentials etc because of ease of configurtion and this project only being a demo more or so project.
 
+### To kick start the whole seeding /new data creation process when the whole project has been configured..
+the command 
+```bash   
+php artisan app:autobots-job
+```
+must be run to kickstart the job
 ## Table of Contents
 
 - [Installation](#installation)
@@ -29,7 +35,7 @@ This Project is for the SmartInsight Assesment Question. Which creates 500 Autob
 1. Clone the repository:
 
 ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/Shorunke999/SmartInsight.git
 ```
 2. Navigate into the project directory:
 
@@ -49,7 +55,7 @@ npm install
 cp .env.example .env
 ```
 
-5. Generate the application key:
+5. Generate the application key: //not necessary if the .env.exampple was used in the .env
 
 ```bash
 php artisan key:generate
@@ -68,11 +74,11 @@ DB_PASSWORD=your_password
 ```bash
 php artisan migrate
 ```
-8. Start the local development server:
+8. Start the local development server: //fourth terminal
 ```bash
 php artisan serve
 ```
-9.Compile the assets:
+9.Compile the assets: //fifth terminal
 
 ```bash
 npm run dev
@@ -93,20 +99,21 @@ or
 php artisan reverb:start --debug
 ```
 
-Start Queue for Data Seeding:
+Start Queue for Data Seeding: //one bash terminal
 ```bash
 php artisan queue:work --queue=seeding
 or 
 php artisan queue:listen --queue=seeding
 ```
-Start Queue to Broadcast Events:
+Start Queue to Broadcast Events: //second terminal
 ```bash
 php artisan queue:work
 ```
 Running the Autobot Job Manually
 If you're developing on Windows, you can manually start the Autobot creation process using the following command. Note that in production, this job should be scheduled to run hourly.
 
-```bash
+//third terminal
+```bash   
 php artisan app:autobots-job
 ```
 
