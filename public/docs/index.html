@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SmartInsightAi Assesment Documentation For Developer Api</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://localhost";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.37.1.js"></script>
+
+    <script src="../docs/js/theme-default-4.37.1.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-autobots">
+                                <a href="#endpoints-GETapi-autobots">GET api/autobots</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-autobots--id--posts">
+                                <a href="#endpoints-GETapi-autobots--id--posts">GET api/autobots/{id}/posts</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts--id--comments">
+                                <a href="#endpoints-GETapi-posts--id--comments">GET api/posts/{id}/comments</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: August 23, 2024</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>The apis below helps fetch resources for specific user and its posts along with its associated comments</p>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-GETapi-autobots">GET api/autobots</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autobots">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/autobots" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/autobots"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autobots">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 5
+x-ratelimit-remaining: 4
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;current_page&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Leanne Graham-66c893c06c325&quot;,
+            &quot;username&quot;: &quot;Bret&quot;,
+            &quot;email&quot;: &quot;Sincere@april.biz&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Kulas Light\&quot;,\&quot;suite\&quot;:\&quot;Apt. 556\&quot;,\&quot;city\&quot;:\&quot;Gwenborough\&quot;,\&quot;zipcode\&quot;:\&quot;92998-3874\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-37.3159\&quot;,\&quot;lng\&quot;:\&quot;81.1496\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;1-770-736-8031 x56442&quot;,
+            &quot;website&quot;: &quot;hildegard.org&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Romaguera-Crona\&quot;,\&quot;catchPhrase\&quot;:\&quot;Multi-layered client-server neural-net\&quot;,\&quot;bs\&quot;:\&quot;harness real-time e-markets\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:30.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;Ervin Howell-66c893c1835ae&quot;,
+            &quot;username&quot;: &quot;Antonette&quot;,
+            &quot;email&quot;: &quot;Shanna@melissa.tv&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Victor Plains\&quot;,\&quot;suite\&quot;:\&quot;Suite 879\&quot;,\&quot;city\&quot;:\&quot;Wisokyburgh\&quot;,\&quot;zipcode\&quot;:\&quot;90566-7771\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-43.9509\&quot;,\&quot;lng\&quot;:\&quot;-34.4618\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;010-692-6593 x09125&quot;,
+            &quot;website&quot;: &quot;anastasia.net&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Deckow-Crist\&quot;,\&quot;catchPhrase\&quot;:\&quot;Proactive didactic contingency\&quot;,\&quot;bs\&quot;:\&quot;synergize scalable supply-chains\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:30.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;Clementine Bauch-66c893c269fa9&quot;,
+            &quot;username&quot;: &quot;Samantha&quot;,
+            &quot;email&quot;: &quot;Nathan@yesenia.net&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Douglas Extension\&quot;,\&quot;suite\&quot;:\&quot;Suite 847\&quot;,\&quot;city\&quot;:\&quot;McKenziehaven\&quot;,\&quot;zipcode\&quot;:\&quot;59590-4157\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-68.6102\&quot;,\&quot;lng\&quot;:\&quot;-47.0653\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;1-463-123-4447&quot;,
+            &quot;website&quot;: &quot;ramiro.info&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Romaguera-Jacobson\&quot;,\&quot;catchPhrase\&quot;:\&quot;Face to face bifurcated interface\&quot;,\&quot;bs\&quot;:\&quot;e-enable strategic applications\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Patricia Lebsack-66c893c5a6008&quot;,
+            &quot;username&quot;: &quot;Karianne&quot;,
+            &quot;email&quot;: &quot;Julianne.OConner@kory.org&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Hoeger Mall\&quot;,\&quot;suite\&quot;:\&quot;Apt. 692\&quot;,\&quot;city\&quot;:\&quot;South Elvis\&quot;,\&quot;zipcode\&quot;:\&quot;53919-4257\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;29.4572\&quot;,\&quot;lng\&quot;:\&quot;-164.2990\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;493-170-9623 x156&quot;,
+            &quot;website&quot;: &quot;kale.biz&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Robel-Corkery\&quot;,\&quot;catchPhrase\&quot;:\&quot;Multi-tiered zero tolerance productivity\&quot;,\&quot;bs\&quot;:\&quot;transition cutting-edge web services\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Chelsey Dietrich-66c893c6812e8&quot;,
+            &quot;username&quot;: &quot;Kamren&quot;,
+            &quot;email&quot;: &quot;Lucio_Hettinger@annie.ca&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Skiles Walks\&quot;,\&quot;suite\&quot;:\&quot;Suite 351\&quot;,\&quot;city\&quot;:\&quot;Roscoeview\&quot;,\&quot;zipcode\&quot;:\&quot;33263\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-31.8129\&quot;,\&quot;lng\&quot;:\&quot;62.5342\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;(254)954-1289&quot;,
+            &quot;website&quot;: &quot;demarco.info&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Keebler LLC\&quot;,\&quot;catchPhrase\&quot;:\&quot;User-centric fault-tolerant solution\&quot;,\&quot;bs\&quot;:\&quot;revolutionize end-to-end systems\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;Mrs. Dennis Schulist-66c893c771dc1&quot;,
+            &quot;username&quot;: &quot;Leopoldo_Corkery&quot;,
+            &quot;email&quot;: &quot;Karley_Dach@jasper.info&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Norberto Crossing\&quot;,\&quot;suite\&quot;:\&quot;Apt. 950\&quot;,\&quot;city\&quot;:\&quot;South Christy\&quot;,\&quot;zipcode\&quot;:\&quot;23505-1337\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-71.4197\&quot;,\&quot;lng\&quot;:\&quot;71.7478\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;1-477-935-8478 x6430&quot;,
+            &quot;website&quot;: &quot;ola.org&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Considine-Lockman\&quot;,\&quot;catchPhrase\&quot;:\&quot;Synchronised bottom-line interface\&quot;,\&quot;bs\&quot;:\&quot;e-enable innovative applications\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;Kurtis Weissnat-66c893c84d0a9&quot;,
+            &quot;username&quot;: &quot;Elwyn.Skiles&quot;,
+            &quot;email&quot;: &quot;Telly.Hoeger@billy.biz&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Rex Trail\&quot;,\&quot;suite\&quot;:\&quot;Suite 280\&quot;,\&quot;city\&quot;:\&quot;Howemouth\&quot;,\&quot;zipcode\&quot;:\&quot;58804-1099\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;24.8918\&quot;,\&quot;lng\&quot;:\&quot;21.8984\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;210.067.6132&quot;,
+            &quot;website&quot;: &quot;elvis.io&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Johns Group\&quot;,\&quot;catchPhrase\&quot;:\&quot;Configurable multimedia task-force\&quot;,\&quot;bs\&quot;:\&quot;generate enterprise e-tailers\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;Nicholas Runolfsdottir V-66c893c92d2c2&quot;,
+            &quot;username&quot;: &quot;Maxime_Nienow&quot;,
+            &quot;email&quot;: &quot;Sherwood@rosamond.me&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Ellsworth Summit\&quot;,\&quot;suite\&quot;:\&quot;Suite 729\&quot;,\&quot;city\&quot;:\&quot;Aliyaview\&quot;,\&quot;zipcode\&quot;:\&quot;45169\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-14.3990\&quot;,\&quot;lng\&quot;:\&quot;-120.7677\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;586.493.6943 x140&quot;,
+            &quot;website&quot;: &quot;jacynthe.com&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Abernathy Group\&quot;,\&quot;catchPhrase\&quot;:\&quot;Implemented secondary concept\&quot;,\&quot;bs\&quot;:\&quot;e-enable extensible e-tailers\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;Glenna Reichert-66c893ca056b3&quot;,
+            &quot;username&quot;: &quot;Delphine&quot;,
+            &quot;email&quot;: &quot;Chaim_McDermott@dana.io&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Dayna Park\&quot;,\&quot;suite\&quot;:\&quot;Suite 449\&quot;,\&quot;city\&quot;:\&quot;Bartholomebury\&quot;,\&quot;zipcode\&quot;:\&quot;76495-3109\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;24.6463\&quot;,\&quot;lng\&quot;:\&quot;-168.8889\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;(775)976-6794 x41206&quot;,
+            &quot;website&quot;: &quot;conrad.com&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Yost and Sons\&quot;,\&quot;catchPhrase\&quot;:\&quot;Switchable contextually-based project\&quot;,\&quot;bs\&quot;:\&quot;aggregate real-time technologies\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;Clementina DuBuque-66c893cad7edb&quot;,
+            &quot;username&quot;: &quot;Moriah.Stanton&quot;,
+            &quot;email&quot;: &quot;Rey.Padberg@karina.biz&quot;,
+            &quot;address&quot;: &quot;{\&quot;street\&quot;:\&quot;Kattie Turnpike\&quot;,\&quot;suite\&quot;:\&quot;Suite 198\&quot;,\&quot;city\&quot;:\&quot;Lebsackbury\&quot;,\&quot;zipcode\&quot;:\&quot;31428-2261\&quot;,\&quot;geo\&quot;:{\&quot;lat\&quot;:\&quot;-38.2386\&quot;,\&quot;lng\&quot;:\&quot;57.2232\&quot;}}&quot;,
+            &quot;phone&quot;: &quot;024-648-3804&quot;,
+            &quot;website&quot;: &quot;ambrose.net&quot;,
+            &quot;company&quot;: &quot;{\&quot;name\&quot;:\&quot;Hoeger LLC\&quot;,\&quot;catchPhrase\&quot;:\&quot;Centralized empowering task-force\&quot;,\&quot;bs\&quot;:\&quot;target end-to-end models\&quot;}&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        }
+    ],
+    &quot;first_page_url&quot;: &quot;http://localhost/api/autobots?page=1&quot;,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 100,
+    &quot;last_page_url&quot;: &quot;http://localhost/api/autobots?page=100&quot;,
+    &quot;links&quot;: [
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=1&quot;,
+            &quot;label&quot;: &quot;1&quot;,
+            &quot;active&quot;: true
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=2&quot;,
+            &quot;label&quot;: &quot;2&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=3&quot;,
+            &quot;label&quot;: &quot;3&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=4&quot;,
+            &quot;label&quot;: &quot;4&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=5&quot;,
+            &quot;label&quot;: &quot;5&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=6&quot;,
+            &quot;label&quot;: &quot;6&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=7&quot;,
+            &quot;label&quot;: &quot;7&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=8&quot;,
+            &quot;label&quot;: &quot;8&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=9&quot;,
+            &quot;label&quot;: &quot;9&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=10&quot;,
+            &quot;label&quot;: &quot;10&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;...&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=99&quot;,
+            &quot;label&quot;: &quot;99&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=100&quot;,
+            &quot;label&quot;: &quot;100&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots?page=2&quot;,
+            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+            &quot;active&quot;: false
+        }
+    ],
+    &quot;next_page_url&quot;: &quot;http://localhost/api/autobots?page=2&quot;,
+    &quot;path&quot;: &quot;http://localhost/api/autobots&quot;,
+    &quot;per_page&quot;: 10,
+    &quot;prev_page_url&quot;: null,
+    &quot;to&quot;: 10,
+    &quot;total&quot;: 1000
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autobots" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-autobots"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autobots"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-autobots" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autobots">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-autobots" data-method="GET"
+      data-path="api/autobots"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autobots', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autobots"
+                    onclick="tryItOut('GETapi-autobots');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autobots"
+                    onclick="cancelTryOut('GETapi-autobots');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autobots"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autobots</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-autobots"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-autobots"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-autobots--id--posts">GET api/autobots/{id}/posts</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-autobots--id--posts">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/autobots/7/posts" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/autobots/7/posts"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-autobots--id--posts">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 5
+x-ratelimit-remaining: 3
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;current_page&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 61,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;sunt aut facere repellat provident occaecati excepturi optio reprehenderit-66c893d508599TEEHd-66c893e343a81&quot;,
+            &quot;body&quot;: &quot;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 62,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;qui est esse-66c893d50859cWeRYv-66c893e346939&quot;,
+            &quot;body&quot;: &quot;est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 63,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;ea molestias quasi exercitationem repellat qui ipsa sit aut-66c893d50859eHBUht-66c893e3489ae&quot;,
+            &quot;body&quot;: &quot;et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 64,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;eum et est occaecati-66c893d5085a1scznD-66c893e34b641&quot;,
+            &quot;body&quot;: &quot;ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 65,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;nesciunt quas odio-66c893d5085a3W5i64-66c893e34fdd5&quot;,
+            &quot;body&quot;: &quot;repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 66,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;dolorem eum magni eos aperiam quia-66c893d5085a6JhXY5-66c893e3525a4&quot;,
+            &quot;body&quot;: &quot;ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 67,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;magnam facilis autem-66c893d5085a9wm0SU-66c893e3540bd&quot;,
+            &quot;body&quot;: &quot;dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 68,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;dolorem dolore est ipsam-66c893d5085abM6PJo-66c893e356eb6&quot;,
+            &quot;body&quot;: &quot;dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 69,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;nesciunt iure omnis dolorem tempora et accusantium-66c893d5085aecFxSz-66c893e358871&quot;,
+            &quot;body&quot;: &quot;consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 70,
+            &quot;user_id&quot;: 7,
+            &quot;title&quot;: &quot;optio molestias id quia eum-66c893d5085b0S7emF-66c893e35e7f4&quot;,
+            &quot;body&quot;: &quot;quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:31.000000Z&quot;
+        }
+    ],
+    &quot;first_page_url&quot;: &quot;http://localhost/api/autobots/7/posts?page=1&quot;,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 1,
+    &quot;last_page_url&quot;: &quot;http://localhost/api/autobots/7/posts?page=1&quot;,
+    &quot;links&quot;: [
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/autobots/7/posts?page=1&quot;,
+            &quot;label&quot;: &quot;1&quot;,
+            &quot;active&quot;: true
+        },
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+            &quot;active&quot;: false
+        }
+    ],
+    &quot;next_page_url&quot;: null,
+    &quot;path&quot;: &quot;http://localhost/api/autobots/7/posts&quot;,
+    &quot;per_page&quot;: 10,
+    &quot;prev_page_url&quot;: null,
+    &quot;to&quot;: 10,
+    &quot;total&quot;: 10
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-autobots--id--posts" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-autobots--id--posts"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-autobots--id--posts"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-autobots--id--posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-autobots--id--posts">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-autobots--id--posts" data-method="GET"
+      data-path="api/autobots/{id}/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-autobots--id--posts', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-autobots--id--posts"
+                    onclick="tryItOut('GETapi-autobots--id--posts');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-autobots--id--posts"
+                    onclick="cancelTryOut('GETapi-autobots--id--posts');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-autobots--id--posts"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/autobots/{id}/posts</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-autobots--id--posts"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-autobots--id--posts"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-autobots--id--posts"
+               value="7"
+               data-component="url">
+    <br>
+<p>The ID of the autobot. Example: <code>7</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-GETapi-posts--id--comments">GET api/posts/{id}/comments</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts--id--comments">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/posts/389/comments" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/posts/389/comments"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts--id--comments">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 5
+x-ratelimit-remaining: 2
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;current_page&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 3881,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;id labore ex et quam laborum-66c893e1bca53&quot;,
+            &quot;body&quot;: &quot;laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium-66c893e1bca54&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3882,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;quo vero reiciendis velit similique earum-66c893e1bca55&quot;,
+            &quot;body&quot;: &quot;est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et-66c893e1bca56&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3883,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;odio adipisci rerum aut animi-66c893e1bca57&quot;,
+            &quot;body&quot;: &quot;quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione-66c893e1bca58&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3884,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;alias odio sit-66c893e1bca59&quot;,
+            &quot;body&quot;: &quot;non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati-66c893e1bca5a&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3885,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;vero eaque aliquid doloribus et culpa-66c893e1bca5b&quot;,
+            &quot;body&quot;: &quot;harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et-66c893e1bca5c&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3886,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;et fugit eligendi deleniti quidem qui sint nihil autem-66c893e1bca5d&quot;,
+            &quot;body&quot;: &quot;doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in-66c893e1bca5e&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3887,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;repellat consequatur praesentium vel minus molestias voluptatum-66c893e1bca5f&quot;,
+            &quot;body&quot;: &quot;maiores sed dolores similique labore et inventore et\nquasi temporibus esse sunt id et\neos voluptatem aliquam\naliquid ratione corporis molestiae mollitia quia et magnam dolor-66c893e1bca60&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3888,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;et omnis dolorem-66c893e1bca61&quot;,
+            &quot;body&quot;: &quot;ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque-66c893e1bca62&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3889,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;provident id voluptas-66c893e1bca63&quot;,
+            &quot;body&quot;: &quot;sapiente assumenda molestiae atque\nadipisci laborum distinctio aperiam et ab ut omnis\net occaecati aspernatur odit sit rem expedita\nquas enim ipsam minus-66c893e1bca64&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3890,
+            &quot;post_id&quot;: 389,
+            &quot;author_name&quot;: &quot;eaque et deleniti atque tenetur ut quo ut-66c893e1bca65&quot;,
+            &quot;body&quot;: &quot;voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis-66c893e1bca66&quot;,
+            &quot;created_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-23T13:51:34.000000Z&quot;
+        }
+    ],
+    &quot;first_page_url&quot;: &quot;http://localhost/api/posts/389/comments?page=1&quot;,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 1,
+    &quot;last_page_url&quot;: &quot;http://localhost/api/posts/389/comments?page=1&quot;,
+    &quot;links&quot;: [
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://localhost/api/posts/389/comments?page=1&quot;,
+            &quot;label&quot;: &quot;1&quot;,
+            &quot;active&quot;: true
+        },
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+            &quot;active&quot;: false
+        }
+    ],
+    &quot;next_page_url&quot;: null,
+    &quot;path&quot;: &quot;http://localhost/api/posts/389/comments&quot;,
+    &quot;per_page&quot;: 10,
+    &quot;prev_page_url&quot;: null,
+    &quot;to&quot;: 10,
+    &quot;total&quot;: 10
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts--id--comments" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts--id--comments"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts--id--comments"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts--id--comments" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts--id--comments">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-posts--id--comments" data-method="GET"
+      data-path="api/posts/{id}/comments"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts--id--comments', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts--id--comments"
+                    onclick="tryItOut('GETapi-posts--id--comments');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts--id--comments"
+                    onclick="cancelTryOut('GETapi-posts--id--comments');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts--id--comments"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/{id}/comments</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-posts--id--comments"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-posts--id--comments"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-posts--id--comments"
+               value="389"
+               data-component="url">
+    <br>
+<p>The ID of the post. Example: <code>389</code></p>
+            </div>
+                    </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
